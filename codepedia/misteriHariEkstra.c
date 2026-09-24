@@ -1,8 +1,22 @@
-# hekerrank
+#include <stdio.h>
 
+int main() {
+  int apakahIniMyElaina; // tetap my elaina di hati
 
+  if (scanf("%d", &apakahIniMyElaina) == 1) {
+    int myPenyihirElaina =
+        (apakahIniMyElaina % 400 == 0) ||
+        (apakahIniMyElaina % 4 == 0 && apakahIniMyElaina % 100 != 0);
 
-@@@=                                  .::*@%@@@@@
+    if (myPenyihirElaina) {
+      printf("KABISAT\n");
+    } else {
+      printf("BUKAN\n");
+    }
+  }
+
+  /*
+@@@@=                                  .::*@%@@@@@
 @@%.                                   .:-:+@@@@@@
 @#         .                           .:--:*@@@@@
 *                                      .:----*@@@@
@@ -25,3 +39,8 @@
          .--:-:...:+::::.:...:-.::-#########**####
    ..:::.. :-:--...::::... .:-:...-#####*##****###
   .:::::::. =-:-::.   ..:  .:::...:*#*#*#****#####
+ .:::::::::.=-:----..   :  .--:....=#*###**#######
+  */
+
+  return 0;
+}
